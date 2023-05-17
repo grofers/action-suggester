@@ -42,9 +42,9 @@ runs:
     - name: Get action repository
       uses: actions/checkout@v3
       with:
-        repository: reviewdog/action-setup
+        repository: grofers/action-setup
         ref: v1.0.0
-        token: ${{ secrets.GH_ACCESS_TOKEN }}
+        token: ${{ inputs.github_token }}
         path: ./action-setup
     - uses: ./action-setup
       with:
